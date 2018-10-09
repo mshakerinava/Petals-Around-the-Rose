@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="./assets/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+    <title>Petals Around the Rose</title>
+</head>
+<body>
+    <div id="container">
+        <h1>Petals Around the Rose</h1>
+        <p>
+            The name of the game is <em>Petals Around the Rose</em>. The name of the game is important. The computer will roll five dice and ask you to guess the score for the roll. The score will always be zero or an even number. Your mission is to work out how the computer calculates the score and become a <em>Potentate of the Rose</em>.
+        </p>
+        <div id="dice">
+            <img src="./assets/images/dice 1.png" id="place1" width="15%" alt="1">
+            <img src="./assets/images/dice 2.png" id="place2" width="15%" alt="2">
+            <img src="./assets/images/dice 3.png" id="place3" width="15%" alt="3">
+            <img src="./assets/images/dice 4.png" id="place4" width="15%" alt="4">
+            <img src="./assets/images/dice 5.png" id="place5" width="15%" alt="5">
+            <img src="./assets/images/dice 6.png" display="none" width="0%">
+        </div>
+        <div id="left"  > Best Run: 0  </div>
+        <div id="middle"> Roll #0      </div>
+        <div id="right" > # Correct: 0 </div>
+        <input type="button" value="Roll Dice" onclick="throwDice(); return false;"/> <br/>
+        <input type="text" size="4" maxlength="256" id="guessbox" placeholder="Your Guess">
+        <input type="button" value="Submit" id="guess-button" disabled="true" onclick="checkGuess(); return false;"> <br/>
+        <p id="result"></p>
+    </div>
+    <script src="./assets/js/petals.js"></script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+@font-face {
+    font-family: 'ET Roman';
+    src: url('../fonts/et-book-roman-line-figures.woff');
+}
+
+* {
+    transition: all 0.2s;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    font-size: 16px;
+}
+
+@media screen and (min-width: 320px) {
+    html {
+        font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    html {
+        font-size: 22px;
+    }
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    box-sizing: content-box;
+    -ms-interpolation-mode: nearest-neighbor;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -o-pixelated;
+    image-rendering: pixelated;
+    font-family: 'ET Roman', Consolas;
+}
+
+
+#container {
+    margin: 3% auto 1% auto;
+    margin-top: 5vh;
+    text-align: center;
+    width: 1200px;
+    max-width: 90%;
+}
+
+#dice {
+    margin: 5vh 0;
+}
+
+#dice>img {
+    margin: 0 0.5%;
+}
+
+input[type=text] {
+    display: inline-block;
+    width: 6em;
+    padding: 0.3em 0;
+    margin: 0 0.3em 0.3em 0;
+    border: 0.08em solid;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+}
+
+input[type=button] {
+    cursor: pointer;
+    display: inline-block;
+    padding: 0.3em 1.2em;
+    margin: 0 0.3em 0.3em 0;
+    border-radius: 0.3em;
+    border: 0.08em solid;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-weight: 300;
+    color: #FFFFFF;
+    background-color: #202020;
+    text-align: center;
+}
+
+input[type=button][disabled] {
+    background-color: #BBBBBB;
+    cursor: default;
+}
+
+#left,
+#right,
+#middle {
+    float: left;
+    width: 31.3333%;
+    padding: 1%;
+    margin-bottom: 4vh;
+}
+
+#left {
+    -moz-border-radius: 0.3em 0 0 0.3em;
+    -webkit-border-radius: 0.3em 0 0 0.3em;
+    background-color: #EEEEEE;
+}
+
+#middle {
+    background-color: #DDDDDD;
+}
+
+#right {
+    -moz-border-radius: 0 0.3em 0.3em 0;
+    -webkit-border-radius: 0 0.3em 0.3em 0;
+    background-color: #EEEEEE;
+}
+
+#guessbox {
+    margin-top: 2vh;
+}
